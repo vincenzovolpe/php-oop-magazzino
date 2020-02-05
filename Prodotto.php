@@ -3,7 +3,7 @@
         public $codice;
         public $nome;
         public $prezzo_vendita;
-        public $prezzo_acquisto
+        public $prezzo_acquisto;
         public $descrizione;
         public $percSconto;
         public $percIva;
@@ -15,17 +15,15 @@
             $this->percIva = $_percIva;
         }
 
-        public getPrezzoInteroIvato() {
+        public function getPrezzoInteroIvato() {
             return $prezzo_vendita  * (1+$percIva/100);
         }
 
-        public getPrezzoScontato() {
+        public function getPrezzoScontato() {
             return getPrezzoInteroIvato() * (1-$percSconto/100);
         }
 
     }
 
-}
 
-    
 ?>
