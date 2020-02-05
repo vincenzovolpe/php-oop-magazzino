@@ -8,19 +8,19 @@
         public $percSconto;
         public $percIva;
 
-        public function __construct($_nome, $_prezzo_vendita, $_prezzo_acquisto, $_percIva) {
-            $this->nome = $_nome;
-            $this->prezzo_vendita = $_prezzo_vendita;
-            $this->prezzo_acquisto = $_prezzo_acquisto;
-            $this->percIva = $_percIva;
+        public function __construct($nome, $prezzo_vendita, $prezzo_acquisto, $percIva) {
+            $this->nome = $nome;
+            $this->prezzo_vendita = $prezzo_vendita;
+            $this->prezzo_acquisto = $prezzo_acquisto;
+            $this->percIva = $percIva;
         }
 
         public function getPrezzoInteroIvato() {
-            return $prezzo_vendita  * (1+$percIva/100);
+            return $this->prezzo_vendita  * (1 + $this->percIva/100);
         }
 
         public function getPrezzoScontato() {
-            return getPrezzoInteroIvato() * (1-$percSconto/100);
+            return getPrezzoInteroIvato() * (1 - $this->percSconto/100);
         }
 
     }

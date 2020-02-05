@@ -3,13 +3,13 @@
 include_once 'Prodotto.php';
 
 class Telefono extends Prodotto {
-    private $brand;
-    private $os;
+    public $brand;
+    public $os;
 
-    public function __construct($name, $price, $brand, $os = null) {
-        parent::__construct($name, $price);
+    public function __construct($nome, $prezzo_vendita, $prezzo_acquisto, $percIva, $brand, $os = null) {
+        parent::__construct($nome, $prezzo_vendita, $prezzo_acquisto, $percIva);
         $this->brand = $brand;
-        $this->os =$os;
+        $this->os = $os;
     }
 }
 ?>

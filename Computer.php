@@ -3,13 +3,13 @@
 include_once 'Prodotto.php';
 
 class Computer extends Prodotto {
-    private $cpuFrequency;
-    private $ram;
+    public $cpuFrequency;
+    public $ram;
 
-    public function __construct($name, $price, $frequency, $ram = null){
-        parent::__construct($name, $price);
+    public function __construct($nome, $prezzo_vendita, $prezzo_acquisto, $percIva, $frequency, $ram = null){
+        parent::__construct($nome, $prezzo_vendita, $prezzo_acquisto, $percIva);
         $this->frequency = $frequency;
-        $this->ram =$ram;
+        $this->ram = $ram;
     }
 }
 
