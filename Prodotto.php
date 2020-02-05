@@ -20,7 +20,7 @@
         }
 
         public function getPrezzoScontato() {
-            return getPrezzoInteroIvato() * (1 - $this->percSconto/100);
+            return $this->getPrezzoInteroIvato() * (1 - $this->percSconto/100);
         }
 
     }
